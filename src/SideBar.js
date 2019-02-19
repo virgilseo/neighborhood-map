@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 
 class SideBar extends Component {
 
-  render() {
+render() {
 
     return(
       <div className='side-container'>
@@ -13,7 +13,10 @@ class SideBar extends Component {
             placeholder="Type in location name"
             onChange={(event) => this.props.filterLocations(event.target.value)}
           />
-        </div>
+          {this.props.places.length === 0 && (
+            <p className='no-search-results'>No search results were found :(</p>
+          )}
+       </div>
         <div className='list-view'>
           <ol className='location-grid'>
           {this.props.places.map((place) => (

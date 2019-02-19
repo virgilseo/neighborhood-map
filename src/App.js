@@ -3,7 +3,6 @@ import './App.css';
 import MapContainer from './Map'
 import SideBar from './SideBar'
 import escapeRegExp from 'escape-string-regexp'
-import sortBy from 'sort-by'
 
 //Store all the information about the locations in a array of objects
 const places = [
@@ -23,7 +22,7 @@ class App extends Component {
     activeMarker: {},
     locationName:[],
     locationAddress:[],
-    query:''
+    query:'',
   }
 
   componentDidMount() {
@@ -57,10 +56,8 @@ class App extends Component {
     } else {
       this.setState({places: places})
     }
+ }
 
-      this.state.places.sort(sortBy('name'))
-
-  }
 
   render() {
     return (
