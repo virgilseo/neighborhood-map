@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import MapContainer from './Map'
+import SideBar from './SideBar'
 
 //Store all the information about the locations in a array of objects
 const places = [
@@ -39,6 +40,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <SideBar places={this.state.places} />
         <MapContainer
           google={this.props.google}
           places={this.state.places}
