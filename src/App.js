@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import MapContainer from './Map'
 import SideBar from './SideBar'
+import escapeRegExp from 'escape-string-regexp'
+import sortBy from 'sort-by'
 
 //Store all the information about the locations in a array of objects
 const places = [
@@ -20,7 +22,8 @@ class App extends Component {
     showingInfoWindow: false,
     activeMarker: {},
     locationName:[],
-    locationAddress:[]
+    locationAddress:[],
+    query:''
   }
 
   componentDidMount() {
@@ -37,10 +40,35 @@ class App extends Component {
       locationAddress: marker.address
     });
 
+  //Filer locations based on user input
+
+  filterLocations = (query) => {
+
+
+    let filterdLocations
+
+    if (query) {
+      this.setState({ query: query.trim() })
+      console.log(query)
+
+      const match = new RegExp(escapeRegExp(this.state.query), 'i')
+      filterdLocations = this.state.places.filter( (place) => match.test(place.name))
+      this.setState({places: filterdLocations})
+    } else {
+      this.setState({places: places})
+    }
+
+      this.state.places.sort(sortBy('name'))
+
+  }
+
   render() {
     return (
       <div className="App">
-        <SideBar places={this.state.places} />
+        <SideBar
+          places={this.state.places}
+          filterLocations={this.filterLocations}
+        />
         <MapContainer
           google={this.props.google}
           places={this.state.places}

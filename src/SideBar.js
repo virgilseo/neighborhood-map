@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 
-
 class SideBar extends Component {
 
   render() {
@@ -9,8 +8,11 @@ class SideBar extends Component {
       <div className='side-container'>
         <h1>Dusseldorf Locations</h1>
         <div className="search-input-wrapper">
-          <input type="text" placeholder="Type in location name" />
-          <button>Filter</button>
+          <input
+            type="text"
+            placeholder="Type in location name"
+            onChange={(event) => this.props.filterLocations(event.target.value)}
+          />
         </div>
         <div className='list-view'>
           <ol className='location-grid'>
