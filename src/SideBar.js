@@ -20,7 +20,11 @@ render() {
         <div className='list-view'>
           <ol className='location-grid'>
           {this.props.places.map((place) => (
-            <li key={place.id} className='list-item'>
+            <li
+              key={place.id}
+              className='list-item'
+              onClick={() => this.props.listItemClick(place)}
+            >
               <p>{place.name}</p>
             </li>
           ))}

@@ -20,16 +20,19 @@ export class MapContainer extends Component {
             key={place.id}
             name={place.name}
             address={place.address}
+            animation={this.props.activeMarker ? (place.name === this.props.activeMarker.name ? this.props.google.maps.Animation.BOUNCE : '0') : '0'}
+            currentMarker={place}
           />
          ))}
            <InfoWindow
-              marker={this.props.activeMarker}
+              position={{lat: parseFloat(this.props.markerLat), lng: parseFloat(this.props.markerLng) }}
               visible={this.props.showingInfoWindow}>
               <div>
-                <h1>{this.props.locationName}</h1>
-                <p>Address: {this.props.locationAddress}</p>
+                <h1>Name</h1>
+                <p>Address: </p>
               </div>
            </InfoWindow>
+
       </Map>
     );
   }

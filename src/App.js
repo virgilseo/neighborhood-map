@@ -20,8 +20,8 @@ class App extends Component {
     places:[],
     showingInfoWindow: false,
     activeMarker: {},
-    locationName:[],
-    locationAddress:[],
+    markerLat:[],
+    markerLng:[],
     query:'',
   }
 
@@ -35,8 +35,10 @@ class App extends Component {
     this.setState({
       activeMarker: marker,
       showingInfoWindow: true,
-      locationName: marker.name,
-      locationAddress: marker.address
+      markerLat: marker.currentMarker.lat,
+      markerLng: marker.currentMarker.lng
+    //  locationName: marker.name,
+    //  locationAddress: marker.address
     });
 
   //Filer locations based on user input
@@ -48,7 +50,6 @@ class App extends Component {
 
     if (query) {
       this.setState({ query: query.trim() })
-      console.log(query)
 
       const match = new RegExp(escapeRegExp(this.state.query), 'i')
       filterdLocations = this.state.places.filter( (place) => match.test(place.name))
@@ -58,21 +59,32 @@ class App extends Component {
     }
  }
 
+ //Handle click on list item Locations. Animate markers and display the appropiate info window.
+    listItemClick = (listItem) => {
+     this.setState({
+       activeMarker: listItem,
+       markerLat: listItem.lat,
+       markerLng: listItem.lng,
+       showingInfoWindow: true
+     })
+    }
 
   render() {
+  
     return (
       <div className="App">
         <SideBar
           places={this.state.places}
           filterLocations={this.filterLocations}
+          listItemClick={this.listItemClick}
         />
         <MapContainer
           google={this.props.google}
           places={this.state.places}
           showingInfoWindow={this.state.showingInfoWindow}
           activeMarker={this.state.activeMarker}
-          locationName={this.state.locationName}
-          locationAddress={this.state.locationAddress}
+          markerLat={this.state.markerLat}
+          markerLng={this.state.markerLng}
           onMarkerClick={this.onMarkerClick}
         />
       </div>
