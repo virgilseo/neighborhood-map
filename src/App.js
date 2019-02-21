@@ -110,7 +110,7 @@ class App extends Component {
           markerLng={this.state.markerLng}
           onMarkerClick={this.onMarkerClick}
           hits={this.state.hits}
-          error = {this.state.error}
+          error={this.state.error}
         />
       </div>
     );

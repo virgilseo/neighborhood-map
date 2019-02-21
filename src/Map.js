@@ -9,6 +9,7 @@ export class MapContainer extends Component {
   render() {
  console.log(this.props.hits)
     return (
+      <div className='map-container'>
       <Map
         google={this.props.google}
         zoom={14}
@@ -43,6 +44,7 @@ export class MapContainer extends Component {
               </div>
            </InfoWindow>
       </Map>
+      </div>
     );
   }
 }

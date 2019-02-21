@@ -12,6 +12,7 @@ render() {
             type="text"
             placeholder="Type in location name"
             onChange={(event) => this.props.filterLocations(event.target.value)}
+            className='input'
           />
           {this.props.places.length === 0 && (
             <p className='no-search-results'>No search results were found :(</p>
