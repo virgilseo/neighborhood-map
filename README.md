@@ -25,6 +25,12 @@ After this a browser window will open on localhost:3000 and you can start using 
 
 If you close the browser window and want to use the app again just remember you can find the it @ localhost:3000.
 
+Note: The application uses a service worker to cache page contents and display them when off line.
+But to enable this feature you must use the app in production mode.
+To do this just run the following commands in your console:
+npm run build
+serve -s build
+
 ## Api
 The application uses third party api to display the map and fetch information about the locations.
 
