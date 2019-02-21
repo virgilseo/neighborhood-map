@@ -30,18 +30,22 @@
     <script>
         //Display a message to the user in case of failure to connect with google maps api
 
+        function gm_authFailure() {
+          let error = document.getElementsByClassName('gm-err-message')[0]
+          error.textContent = 'Failed to load Google MAP API (authentication failure)'
+         }
+
+
         function apiFail() {
           try {
             let mapLoad = document.getElementsByClassName('map-container')
 
             if (mapLoad.length < 1) {
-              throw 'Could not fetch the map from Google servers. Please try again later.';
+              throw 'Failed to load Google MAP API. Please try again later';
             }
           }
           catch (event) {
-            let errorMessage = document.getElementsByTagName('div')[5]
-            errorMessage.textContent = event
-            console.log(event)
+            alert(event)
           }
         }
         // Wait before displaying the error message
