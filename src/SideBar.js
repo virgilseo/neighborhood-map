@@ -13,7 +13,7 @@ render() {
             placeholder="Search by name"
             onChange={(event) => this.props.filterLocations(event.target.value)}
             className='input'
-            tabindex='0'
+            tabIndex='0'
           />
           {this.props.places.length === 0 && (
             <p className='no-search-results'>No search results were found :(</p>
@@ -26,7 +26,8 @@ render() {
               key={place.id}
               className='list-item'
               onClick={() => this.props.listItemClick(place)}
-              tabindex='0'
+              onKeyPress={() => this.props.listItemClick(place)}
+              tabIndex='0'
             >
               <p>{place.name}</p>
             </li>

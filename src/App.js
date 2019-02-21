@@ -34,6 +34,7 @@ class App extends Component {
 
 
   //Handle marker click and set visibility for the info window
+  //Fetch information for a specific location from third party api and suply it to the user
 
   onMarkerClick = (props, marker, e) => {
     this.setState({
@@ -73,7 +74,8 @@ class App extends Component {
  }
 
  //Handle click on list item Locations. Animate markers and display the appropiate info window.
-    listItemClick = (listItem) => {
+ //Fetch information for a specific location from third party api and suply it to the user
+    listItemClick = (listItem, e) => {
      this.setState({
        activeMarker: listItem,
        markerLat: listItem.lat,
