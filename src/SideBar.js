@@ -19,8 +19,8 @@ render() {
             <p className='no-search-results'>No search results were found :(</p>
           )}
        </div>
-        <div className='list-view'>
-          <ol className='location-grid'>
+        <div className='list-view' id='locations-list'>
+          <ol className='location-grid' aria-labelledby="locations-list">
           {this.props.places.map((place) => (
             <li
               key={place.id}
@@ -28,6 +28,8 @@ render() {
               onClick={() => this.props.listItemClick(place)}
               onKeyPress={() => this.props.listItemClick(place)}
               tabIndex='0'
+              role='button'
+              name={place.name}
             >
               <p>{place.name}</p>
             </li>
