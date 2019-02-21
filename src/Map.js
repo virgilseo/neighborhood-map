@@ -5,8 +5,9 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 export class MapContainer extends Component {
 
-  render() {
 
+  render() {
+ console.log(this.props.hits)
     return (
       <Map
         google={this.props.google}
@@ -20,19 +21,27 @@ export class MapContainer extends Component {
             key={place.id}
             name={place.name}
             address={place.address}
-            animation={this.props.activeMarker ? (place.name === this.props.activeMarker.name ? this.props.google.maps.Animation.BOUNCE : '0') : '0'}
+            animation={this.props.activeMarker ? (place.name === this.props.activeMarker.name ? this.props.google.maps.Animation.BOUNCE :'0') : '0'}
             currentMarker={place}
+            id={place.id}
           />
          ))}
            <InfoWindow
               position={{lat: parseFloat(this.props.markerLat), lng: parseFloat(this.props.markerLng) }}
               visible={this.props.showingInfoWindow}>
               <div>
-                <h1>Name</h1>
-                <p>Address: </p>
+              {this.props.hits !== [] && (
+                <div>
+                  <h1>{this.props.hits.name}</h1>
+                  <p>{this.props.hits.timeZone}</p>
+                  <p>{this.props.hits.description }</p>
+                </div>
+              )}
+              {this.props.error === 'error' && (
+                <p>Something went wrong</p>
+              )}
               </div>
            </InfoWindow>
-
       </Map>
     );
   }
