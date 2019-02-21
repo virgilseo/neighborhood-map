@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Neighborhood-map Project
 
-## Available Scripts
+A browser app featuring five different locations on a neighborhood of my choice. The neighborhood is Dusseldorf, city center.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+* [Instructions](#instructions)
+* [Installation](#installation)
+* [Third Party Api](#third party api)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instructions
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This app features five locations in Dusseldorf city center. The sider bar off the app features a search box and a list view.
+You can filter the locations by typing in the name in the search box.
+The app also features a map with five markers representing the five default locations. When you click on a marker a info window pops up providing you with further information on the locations.
 
-### `npm test`
+If you click on a item in the list view the corresponding marker animates on the map and an info window pops up.  
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+Clone the current repository using: git clone https://github.com/virgilseo/neighborhood-map.git
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Next, from the project folder you need to open a terminal window and run the following command: npm install. After the installation has finished then run this command: npm start.
+After this a browser window will open on localhost:3000 and you can start using the app.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+If you close the browser window and want to use the app again just remember you can find the it @ localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Third Party Api
+The application uses third party api to display the map and fetch information about the locations.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Google Maps Api: https://cloud.google.com/maps-platform/
+2. Foursquare Api: https://foursquare.com/
