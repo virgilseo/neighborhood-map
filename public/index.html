@@ -27,6 +27,28 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+        //Display a message to the user in case of failure to connect with google maps api
+
+        function apiFail() {
+          try {
+            let mapLoad = document.getElementsByClassName('map-container')
+
+            if (mapLoad.length < 1) {
+              throw 'Could not fetch the map from Google servers. Please try again later.';
+            }
+          }
+          catch (event) {
+            let errorMessage = document.getElementsByTagName('div')[5]
+            errorMessage.textContent = event
+            console.log(event)
+          }
+        }
+        // Wait before displaying the error message
+        setTimeout(function () {
+          apiFail();
+        }, 8000);
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
