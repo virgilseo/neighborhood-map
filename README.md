@@ -6,7 +6,7 @@ A browser app featuring five different locations on a neighborhood of my choice.
 
 * [Instructions](#instructions)
 * [Installation](#installation)
-* [Third Party Api](#third party api)
+* [Api](#api)
 
 ## Instructions
 
@@ -25,7 +25,7 @@ After this a browser window will open on localhost:3000 and you can start using 
 
 If you close the browser window and want to use the app again just remember you can find the it @ localhost:3000.
 
-## Third Party Api
+## Api
 The application uses third party api to display the map and fetch information about the locations.
 
 1. Google Maps Api: https://cloud.google.com/maps-platform/
