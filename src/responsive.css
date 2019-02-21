@@ -1,0 +1,52 @@
+@media only screen and (max-width: 600px) {
+  .map-container {
+    width: calc(100% - 30%);
+  }
+  .list-view-title {
+    font-size: 1em;
+    margin-left: 10px;
+  }
+  .list-item {
+    font-size: 0.7em;
+  }
+  .input {
+    font-size: 0.6em;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .list-view-title {
+    font-size: 1.1em;
+    margin-left: 10px;
+  }
+  .list-item {
+    font-size: 1em;
+  }
+  .input {
+    font-size: 0.8em;
+  }
+  .map-container {
+    width: calc(100% - 30%);
+  }
+}
+
+
+@media only screen and (min-width: 800px) {
+  .list-view-title {
+    font-size: 1.4em;
+    margin-left: 10px;
+  }
+  .list-item {
+    font-size: 1.2em;
+  }
+  .input {
+    font-size: 1.2em;
+  }
+  .side-container {
+    width:25%;
+  }
+
+  .map-container {
+    width: calc(100% - 25%);
+  }
+}

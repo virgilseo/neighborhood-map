@@ -6,11 +6,11 @@ render() {
 
     return(
       <div className='side-container'>
-        <h1>Dusseldorf Locations</h1>
+        <h1 className='list-view-title'>Dusseldorf Locations</h1>
         <div className="search-input-wrapper">
           <input
             type="text"
-            placeholder="Type in location name"
+            placeholder="Search by name"
             onChange={(event) => this.props.filterLocations(event.target.value)}
             className='input'
           />

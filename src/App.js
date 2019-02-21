@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import MapContainer from './Map'
-import SideBar from './SideBar'
-import escapeRegExp from 'escape-string-regexp'
+import './responsive.css';
+import MapContainer from './Map';
+import SideBar from './SideBar';
+import escapeRegExp from 'escape-string-regexp';
 
 //Store all the information about the locations in a array of objects
 const places = [

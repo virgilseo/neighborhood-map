@@ -14,11 +14,9 @@
 }
 
 .map-container {
-
   position: fixed;
-  width: calc(100% - 150px);
+  width: calc(100% - 25%);
   height: 100%;
-
 }
 
 .location-grid{
