@@ -28,28 +28,26 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script>
-        //Display a message to the user in case of failure to connect with google maps api
-        function gm_authFailure() {
-              let error = document.getElementsByClassName('gm-err-message')[0]
-              error.textContent = 'Failed to load Google MAP API (authentication failure)'
+      //Display a message to the user in case of failure to connect with google maps api
+      function gm_authFailure() {
+            let error = document.getElementsByClassName('gm-err-message')[0]
+            error.textContent = 'Failed to load Google MAP API (authentication failure)'
+            alert('Failed to load Google MAP API. Please try again later.')
+          }
+          function apiFail() {
+            try {
+              let loading = document.getElementsByClassName('map-container')
+              if (loading.length < 1) {
+                throw 'Failed to load Google MAP API. Please try again later';
+              }
+            }
+            catch (event) {
               alert('Failed to load Google MAP API. Please try again later.')
             }
-            function error() {
-              try {
-                let loading = document.getElementsByClassName('map-container')
-                if (loading.length == 0) {
-                  throw 'Failed to load Google MAP API. Please try again later';
-                }
-              }
-              catch (e) {
-                let elem = document.getElementsByTagName('div')[5]
-                elem.classList.add('error-text');
-                elem.textContent = e
-              }
-            }
-            setTimeout(function () {
-              error();
-            }, 5000);
+          }
+          setTimeout(function () {
+            apiFail();
+          }, 7000);
 
     </script>
     <!--
