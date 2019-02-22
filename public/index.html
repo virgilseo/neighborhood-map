@@ -29,29 +29,28 @@
     <div id="root"></div>
     <script>
         //Display a message to the user in case of failure to connect with google maps api
-
         function gm_authFailure() {
-          let error = document.getElementsByClassName('gm-err-message')[0]
-          error.textContent = 'Failed to load Google MAP API (authentication failure)'
-         }
-
-
-        function apiFail() {
-          try {
-            let mapLoad = document.getElementsByClassName('map-container')
-
-            if (mapLoad.length < 1) {
-              throw 'Failed to load Google MAP API. Please try again later';
+              let error = document.getElementsByClassName('gm-err-message')[0]
+              error.textContent = 'Failed to load Google MAP API (authentication failure)'
+              alert('Failed to load Google MAP API. Please try again later.')
             }
-          }
-          catch (event) {
-            alert(event)
-          }
-        }
-        // Wait before displaying the error message
-        setTimeout(function () {
-          apiFail();
-        }, 8000);
+            function error() {
+              try {
+                let loading = document.getElementsByClassName('map-container')
+                if (loading.length == 0) {
+                  throw 'Failed to load Google MAP API. Please try again later';
+                }
+              }
+              catch (e) {
+                let elem = document.getElementsByTagName('div')[5]
+                elem.classList.add('error-text');
+                elem.textContent = e
+              }
+            }
+            setTimeout(function () {
+              error();
+            }, 5000);
+
     </script>
     <!--
       This HTML file is a template.
