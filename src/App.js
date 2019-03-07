@@ -4,6 +4,7 @@ import './responsive.css';
 import MapContainer from './Map';
 import SideBar from './SideBar';
 import escapeRegExp from 'escape-string-regexp';
+import {debounce} from 'lodash';
 
 //Store all the information about the locations in a array of objects
 const places = [
@@ -55,9 +56,10 @@ class App extends Component {
       .catch(error =>  this.setState({error: 'error', hits:[]}))
    }
 
+
   //Filer locations based on user input
 
-  filterLocations = (query) => {
+  filterLocations = debounce((query) => {
 
     let filterdLocations
 
@@ -71,7 +73,7 @@ class App extends Component {
     } else {
       this.setState({places: places})
     }
- }
+  },700)
 
  //Handle click on list item Locations. Animate markers and display the appropiate info window.
  //Fetch information for a specific location from third party api and suply it to the user

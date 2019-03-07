@@ -46,11 +46,14 @@
   font-weight: bold;
 }
 
+.list-item {
+  font-weight: 500;
+}
+
 .list-item:hover {
   color: black;
   cursor: pointer;
   text-shadow: 2px 2px 2px #1C6EA4;
-
 }
 
 .list-item:focus {
