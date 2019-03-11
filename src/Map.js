@@ -6,7 +6,7 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 export class MapContainer extends Component {
 
   render() {
-
+    console.log(this.props.hits)
     return (
       <div className='map-container'>
         <Map
@@ -32,9 +32,20 @@ export class MapContainer extends Component {
                 <div>
                 {this.props.hits !== [] && (
                   <div>
-                    <h1>{this.props.hits.name}</h1>
-                    <p>{this.props.hits.timeZone}</p>
-                    <p>{this.props.hits.description }</p>
+                    <h2>{this.props.hits.name}</h2>
+                    {this.props.hits.bestPhoto && (
+                      <img alt={this.props.hits.name} src={`${this.props.hits.bestPhoto.prefix}400x200${this.props.hits.bestPhoto.suffix}`}/>
+                    )}
+                    {this.props.hits.location && (
+                      <p>{Object.values(this.props.hits.location.address)}</p>
+                    )}
+                    {this.props.hits.contact && (
+                      <p>{Object.values(this.props.hits.contact.formattedPhone || '')}</p>
+                    )}
+                    {this.props.hits.hours && (
+                      <p>{Object.values(this.props.hits.hours.status)}</p>
+                    )}
+                    <a href={this.props.hits.url} target="_blank" rel="noopener noreferrer">{this.props.hits.url}</a>
                   </div>
                 )}
                 {this.props.error === 'error' && (

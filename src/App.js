@@ -44,7 +44,7 @@ class App extends Component {
       markerLat: marker.currentMarker.lat,
       markerLng: marker.currentMarker.lng,
     })
-    fetch(`https://api.foursquare.com/v2/venues/${marker.id}?&client_id=R03RZUD2XBBLFZT5QU0PRVI4FVUCDTCACKDHDI2N4A4SK0NI&client_secret=JNKWRDCAAHG4R1ODOEWE5S4P0DMQSZ2BCAPGL2IU34YEJMLW&v=20190220`)
+    fetch(`https://api.foursquare.com/v2/venues/${marker.id}?&client_id=ITQ0RTP2N4E2GRW1PUVHVWHCRMBOQAXIPDQK4VMFVPTRYY23&client_secret=3APPTXCDHJG5Q0I3S0BBOTOHYRNSCOBQARRXFNWZL5E3MAKU&v=20190220`)
     .then(response => {
       if (response.ok) {
         return response.json();
@@ -84,7 +84,7 @@ class App extends Component {
        markerLng: listItem.lng,
        showingInfoWindow: true,
      })
-     fetch(`https://api.foursquare.com/v2/venues/${listItem.id}?&client_id=R03RZUD2XBBLFZT5QU0PRVI4FVUCDTCACKDHDI2N4A4SK0NI&client_secret=JNKWRDCAAHG4R1ODOEWE5S4P0DMQSZ2BCAPGL2IU34YEJMLW&v=20190220`)
+     fetch(`https://api.foursquare.com/v2/venues/${listItem.id}?&client_id=ITQ0RTP2N4E2GRW1PUVHVWHCRMBOQAXIPDQK4VMFVPTRYY23&client_secret=3APPTXCDHJG5Q0I3S0BBOTOHYRNSCOBQARRXFNWZL5E3MAKU&v=20190220`)
      .then(response => {
        if (response.ok) {
          return response.json();
