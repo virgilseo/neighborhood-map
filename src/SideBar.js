@@ -16,7 +16,7 @@ render() {
             tabIndex='0'
           />
           {this.props.places.length === 0 && (
-            <p className='no-search-results'>No search results were found :(</p>
+            <p className='no-search-results'>No search results were found</p>
           )}
        </div>
         <div className='list-view' id='locations-list'>

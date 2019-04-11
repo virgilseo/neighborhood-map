@@ -40,13 +40,14 @@ img {
   margin-left: 10px;
 }
 
-.api-text{
+.api-text {
   font-size: 0.7em;
   position: absolute;
   bottom: 0;
   width: 18%;
   margin-left: 10px;
-  color: black;
+  color: #ff6600;
+  text-shadow: 0.5px 0.5px 0.5px #0d0d0d;
   font-weight: bold;
 }
 
@@ -55,16 +56,33 @@ img {
 }
 
 .list-item:hover {
-  color: black;
+  color: #ff6600;
   cursor: pointer;
-  text-shadow: 2px 2px 2px #1C6EA4;
+  text-shadow: 2px 2px 2px #0d0d0d;
+  transition: 1.2s;
+  font-weight: 750;
 }
 
 .list-item:focus {
-  color: black;
-  text-shadow: 2px 2px 2px #1C6EA4;
+  color: #ff6600;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px #0d0d0d;
+  transition: 1.2s;
+  font-weight: 750;
 }
 
 .list-view-title {
-  text-shadow: 4px 4px 4px black;
+  color: #ff6600;
+  text-shadow: 2px 2px 2px #0d0d0d;
+}
+
+.no-search-results {
+  margin-left: 10px;
+}
+
+/* Info Window */
+
+.location-title {
+  color: #ff6600;
+  text-shadow: 1px 1px 1px #0d0d0d;
 }

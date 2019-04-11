@@ -32,7 +32,7 @@ export class MapContainer extends Component {
                 <div>
                 {this.props.hits !== [] && (
                   <div>
-                    <h2>{this.props.hits.name}</h2>
+                    <h2 className='location-title'>{this.props.hits.name}</h2>
                     {this.props.hits.bestPhoto && (
                       <img alt={this.props.hits.name} src={`${this.props.hits.bestPhoto.prefix}400x200${this.props.hits.bestPhoto.suffix}`}/>
                     )}
