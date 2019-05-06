@@ -41,11 +41,6 @@ img {
 }
 
 .api-text {
-  font-size: 0.7em;
-  position: absolute;
-  bottom: 0;
-  width: 18%;
-  margin-left: 10px;
   color: #ff6600;
   text-shadow: 0.5px 0.5px 0.5px #0d0d0d;
   font-weight: bold;
@@ -85,4 +80,8 @@ img {
 .location-title {
   color: #ff6600;
   text-shadow: 1px 1px 1px #0d0d0d;
+}
+
+.infowindow-line {
+  margin-top: 5%;
 }

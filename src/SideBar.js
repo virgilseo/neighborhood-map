@@ -35,7 +35,6 @@ render() {
             </li>
           ))}
           </ol>
-          <p className='api-text'>The information for the locations is fetched from <a href="https://foursquare.com/" target="_blank" rel="noopener noreferrer">Foursquare</a></p>
         </div>
       </div>
     )

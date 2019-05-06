@@ -46,6 +46,8 @@ export class MapContainer extends Component {
                       <p>{Object.values(this.props.hits.hours.status)}</p>
                     )}
                     <a href={this.props.hits.url} target="_blank" rel="noopener noreferrer">{this.props.hits.url}</a>
+                    <hr className='infowindow-line'></hr>
+                    <p className='api-text'>The information for the locations is fetched from <a href="https://foursquare.com/" target="_blank" rel="noopener noreferrer">Foursquare</a></p>
                   </div>
                 )}
                 {this.props.error === 'error' && (
