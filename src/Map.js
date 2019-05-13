@@ -29,7 +29,7 @@ export class MapContainer extends Component {
                 position={{lat: parseFloat(this.props.markerLat), lng: parseFloat(this.props.markerLng)}}
                 visible={this.props.showingInfoWindow}>
                 <div className='info-window'>
-                {this.props.hits !== [] && (
+                {this.props.hits !== [] && !this.props.error && (
                   <div>
                     <h2 className='location-title'>{this.props.hits.name}</h2>
                     {this.props.hits.bestPhoto && (
@@ -50,7 +50,7 @@ export class MapContainer extends Component {
                   </div>
                 )}
                 {this.props.error === 'error' && (
-                  <p>Something went wrong</p>
+                  <p className='error-message'>Something went wrong. PLease try agin later.</p>
                 )}
                 </div>
              </InfoWindow>
