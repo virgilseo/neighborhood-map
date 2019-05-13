@@ -50,7 +50,7 @@ export class MapContainer extends Component {
                   </div>
                 )}
                 {this.props.error === 'error' && (
-                  <p className='error-message'>Something went wrong. PLease try agin later.</p>
+                  <p className='error-message'>Something went wrong. PLease try again later.</p>
                 )}
                 </div>
              </InfoWindow>
