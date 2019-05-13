@@ -6,7 +6,7 @@ render() {
 
     return(
       <div className='side-container'>
-        <h1 className='list-view-title'>Dusseldorf Locations</h1>
+        <h1 className='list-view-title'>Düsseldorf Places</h1>
         <div className="search-input-wrapper">
           <input
             type="search"

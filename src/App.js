@@ -9,9 +9,9 @@ import {debounce} from 'lodash';
 //Store all the information about the locations in a array of objects
 const places = [
   { id: '4b4f5c12f964a520080327e3', name: 'KIT - Kunst im Tunnel', address: 'Mannesmannufer 1b, 40213 Düsseldorf', lat: 51.220050, lng: 6.767270 },
-  { id: '4be413a2477d9c742184e62d', name: 'Filmmuseum Düsseldorf', address: 'Schulstraße 4, 40213 Düsseldorf', lat: 51.223810, lng: 6.771320 },
-  { id: '562a8a69498e31c0f73f3339', name:'TeamEscape Düsseldorf', address: 'Alexanderstraße 31, 40210 Düsseldorf',  lat: 51.220050, lng: 6.783620 },
-  { id: '4fbd2705e4b0d4cb242c78ee', name: 'Verwaltungsgericht Düsseldorf', address: 'Bastionstraße 39, 40213 Düsseldorf', lat: 51.221380, lng: 6.776260 },
+  { id: '4be413a2477d9c742184e62d', name: 'Filmmuseum ', address: 'Schulstraße 4, 40213 Düsseldorf', lat: 51.223810, lng: 6.771320 },
+  { id: '562a8a69498e31c0f73f3339', name:'TeamEscape', address: 'Alexanderstraße 31, 40210 Düsseldorf',  lat: 51.220050, lng: 6.783620 },
+  { id: '4fbd2705e4b0d4cb242c78ee', name: 'Administrative Court', address: 'Bastionstraße 39, 40213 Düsseldorf', lat: 51.221380, lng: 6.776260 },
   { id: '4b7149b2f964a5208d3f2de3', name:'Schadow-Arkaden', address:'Schadowstraße 11, 40212 Düsseldorf', lat: 51.225510, lng: 6.780310 }
 ]
 

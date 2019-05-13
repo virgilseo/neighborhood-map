@@ -1,56 +1,71 @@
 @media only screen and (max-width: 600px) {
   .map-container {
     width: calc(100% - 30%);
+    height: 100%;
+    margin-top: 0;
   }
   .list-view-title {
-    font-size: 1em;
-    margin-left: 10px;
+    font-size: 0.9em;
   }
   .list-item {
     font-size: 0.7em;
   }
   .input {
-    font-size: 0.6em;
+    font-size: 0.5em;
+    width: 85%;
+    height: 20px;
   }
   .api-text {
+    font-size: 0.7em;
+  }
+  .location-title {
+    font-size: 1.2em;
+  }
+  .no-search-results{
     font-size: 0.6em;
-    text-align: center;
   }
 }
 
 @media only screen and (min-width: 601px) {
   .list-view-title {
     font-size: 1.1em;
-    margin-left: 10px;
+  }
+  .list-item {
+    font-size: 0.9em;
+  }
+  .input {
+    font-size: 0.9em;
+    height: 24px;
+  }
+  .map-container {
+    width: calc(100% - 35%);
+  }
+  .api-text {
+    font-size: 0.8em;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .list-view-title {
+    font-size: 1.5em;
   }
   .list-item {
     font-size: 1em;
   }
   .input {
-    font-size: 0.8em;
-  }
-  .map-container {
-    width: calc(100% - 30%);
-  }
-}
-
-
-@media only screen and (min-width: 800px) {
-  .list-view-title {
-    font-size: 1.4em;
-    margin-left: 10px;
-  }
-  .list-item {
-    font-size: 1.1em;
-  }
-  .input {
+    width: 90%;
     font-size: 0.9em;
+    height: 28px;
   }
   .side-container {
     width:20%;
   }
 
   .map-container {
-    width: calc(100% - 20%);
+    width: calc(100% - 22.5%);
+  }
+  .api-text {
+    font-size: 0.9em;
   }
 }

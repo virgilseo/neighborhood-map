@@ -6,7 +6,6 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 export class MapContainer extends Component {
 
   render() {
-    console.log(this.props.hits)
     return (
       <div className='map-container'>
         <Map
@@ -27,9 +26,9 @@ export class MapContainer extends Component {
             />
            ))}
              <InfoWindow
-                position={{lat: parseFloat(this.props.markerLat), lng: parseFloat(this.props.markerLng) }}
+                position={{lat: parseFloat(this.props.markerLat), lng: parseFloat(this.props.markerLng)}}
                 visible={this.props.showingInfoWindow}>
-                <div>
+                <div className='info-window'>
                 {this.props.hits !== [] && (
                   <div>
                     <h2 className='location-title'>{this.props.hits.name}</h2>
