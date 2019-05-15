@@ -29,7 +29,12 @@ export class MapContainer extends Component {
                 position={{lat: parseFloat(this.props.markerLat), lng: parseFloat(this.props.markerLng)}}
                 visible={this.props.showingInfoWindow}>
                 <div className='info-window'>
-                {this.props.hits !== [] && !this.props.error && (
+                {this.props.isLoading === true && (
+                  <div className='loader-container'>
+                    <div className='infowindow-loader'></div>
+                  </div>
+                )}
+                {this.props.hits !== [] && !this.props.error && this.props.isLoading === false && (
                   <div>
                     <h2 className='location-title'>{this.props.hits.name}</h2>
                     {this.props.hits.bestPhoto && (
@@ -49,8 +54,8 @@ export class MapContainer extends Component {
                     <p className='api-text'>The information for the locations is fetched from <a href="https://foursquare.com/" target="_blank" rel="noopener noreferrer">Foursquare</a></p>
                   </div>
                 )}
-                {this.props.error === 'error' && (
-                  <p className='error-message'>Something went wrong. PLease try again later.</p>
+                {this.props.error === 'error' && this.props.isLoading === false && (
+                  <p className='error-message'>Something went wrong. Please try again later.</p>
                 )}
                 </div>
              </InfoWindow>

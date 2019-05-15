@@ -26,7 +26,8 @@ class App extends Component {
     markerLng:[],
     query:'',
     hits:[],
-    error:''
+    error:'',
+    isLoading: false
   }
 
   componentDidMount() {
@@ -43,6 +44,7 @@ class App extends Component {
       showingInfoWindow: true,
       markerLat: marker.currentMarker.lat,
       markerLng: marker.currentMarker.lng,
+      isLoading: true,
     })
     fetch(`https://api.foursquare.com/v2/venues/${marker.id}?&client_id=ITQ0RTP2N4E2GRW1PUVHVWHCRMBOQAXIPDQK4VMFVPTRYY23&client_secret=3APPTXCDHJG5Q0I3S0BBOTOHYRNSCOBQARRXFNWZL5E3MAKU&v=20190220`)
     .then(response => {
@@ -52,8 +54,8 @@ class App extends Component {
         throw new Error('Something went wrong ...');
       }
      })
-      .then(data => this.setState({hits: data.response.venue, error:''}))
-      .catch(error =>  this.setState({error: 'error', hits:[]}))
+      .then(data => this.setState({hits: data.response.venue, error:'', isLoading: false}))
+      .catch(error =>  this.setState({error: 'error', hits:[], isLoading: false}))
    }
 
 
@@ -83,6 +85,7 @@ class App extends Component {
        markerLat: listItem.lat,
        markerLng: listItem.lng,
        showingInfoWindow: true,
+       isLoading: true
      })
      fetch(`https://api.foursquare.com/v2/venues/${listItem.id}?&client_id=ITQ0RTP2N4E2GRW1PUVHVWHCRMBOQAXIPDQK4VMFVPTRYY23&client_secret=3APPTXCDHJG5Q0I3S0BBOTOHYRNSCOBQARRXFNWZL5E3MAKU&v=20190220`)
      .then(response => {
@@ -92,8 +95,8 @@ class App extends Component {
          throw new Error('Something went wrong ...');
        }
       })
-       .then(data => this.setState({hits: data.response.venue, error:''}))
-       .catch(error =>  this.setState({error: 'error', hits:[]}))
+       .then(data => this.setState({hits: data.response.venue, error:'', isLoading: false}))
+       .catch(error =>  this.setState({error: 'error', hits:[], isLoading: false}))
     }
 
   render() {
@@ -116,6 +119,7 @@ class App extends Component {
           onMarkerClick={this.onMarkerClick}
           hits={this.state.hits}
           error={this.state.error}
+          isLoading={this.state.isLoading}
         />
       </div>
     );
