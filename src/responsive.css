@@ -43,6 +43,9 @@
   .api-text {
     font-size: 0.8em;
   }
+  .info-window {
+    width: 250px;
+  }
 }
 
 
@@ -67,5 +70,8 @@
   }
   .api-text {
     font-size: 0.9em;
+  }
+  .info-window {
+    width: 330px;
   }
 }
