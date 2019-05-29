@@ -6,6 +6,7 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 export class MapContainer extends Component {
 
   render() {
+    console.log(this.props.hits)
     return (
       <div className='map-container'>
         <Map
@@ -47,7 +48,7 @@ export class MapContainer extends Component {
                       <p>{Object.values(this.props.hits.contact.formattedPhone || '')}</p>
                     )}
                     {this.props.hits.hours && (
-                      <p>{Object.values(this.props.hits.hours.status)}</p>
+                        <p>{Object.values(this.props.hits.hours.status)}</p>
                     )}
                     <a href={this.props.hits.url} target="_blank" rel="noopener noreferrer">{this.props.hits.url}</a>
                     <hr className='infowindow-line'></hr>
