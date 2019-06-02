@@ -18,7 +18,16 @@ render() {
           {this.props.places.length === 0 && (
             <p className='no-search-results'>No search results were found</p>
           )}
-       </div>
+        </div>
+        <div className='filter-wrapper'>
+          <select onChange={(event) => this.props.filterLocationType(event.target.value)}>
+            <option value='off'>off</option>
+            <option value='brewery'>brewery</option>
+            <option value='escape room'>escape room</option>
+            <option value='museum'>museum</option>
+            <option value='restaurant'>restaurant</option>
+          </select>
+        </div>
         <div className='list-view' id='locations-list'>
           <ol className='location-grid' aria-labelledby="locations-list">
           {this.props.places.map((place) => (

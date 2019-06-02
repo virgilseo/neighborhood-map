@@ -84,6 +84,7 @@ class App extends Component {
       this.setState({places: filterdLocations})
     } else {
       this.setState({places: places})
+      this.setState({showingInfoWindow: false})
     }
   },700)
 
@@ -109,6 +110,26 @@ class App extends Component {
        .catch(error =>  this.setState({error: 'error', hits:[], isLoading: false}))
     }
 
+    // Filter locations based on type
+
+    filterLocationType = (option) => {
+      let filterdLocations
+
+      if (option !== 'off') {
+
+        const match = new RegExp(escapeRegExp(option), 'i')
+        filterdLocations = places.filter( (place) => match.test(place.type))
+
+        this.setState({places: filterdLocations})
+        this.setState({showingInfoWindow: false})
+
+      } else {
+        this.setState({places: places})
+        this.setState({showingInfoWindow: false})
+      }
+
+    }
+
   render() {
 
     return (
@@ -118,6 +139,7 @@ class App extends Component {
           filterLocations={this.filterLocations}
           listItemClick={this.listItemClick}
           hits={this.state.hits}
+          filterLocationType={this.filterLocationType}
         />
         <MapContainer
           google={this.props.google}
