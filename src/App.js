@@ -4,6 +4,7 @@ import './responsive.css';
 import Header from './Header'
 import MapContainer from './Map';
 import SideBar from './SideBar';
+import Footer from './Footer'
 import escapeRegExp from 'escape-string-regexp';
 import {debounce} from 'lodash';
 
@@ -155,6 +156,7 @@ class App extends Component {
           error={this.state.error}
           isLoading={this.state.isLoading}
         />
+        <Footer />
       </div>
     );
   }

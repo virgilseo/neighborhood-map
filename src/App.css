@@ -138,3 +138,19 @@ img {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* Footer */
+
+.footer-container {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  color: #26a659;
+  font-size: 1.2em;
+  font-weight: 300;
+}
