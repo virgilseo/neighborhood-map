@@ -24,6 +24,7 @@ export class MapContainer extends Component {
               animation={this.props.activeMarker ? (place.name === this.props.activeMarker.name ? this.props.google.maps.Animation.BOUNCE :'0') : '0'}
               currentMarker={place}
               id={place.id}
+              title={`${place.name} - ${place.type}`}
             />
            ))}
              <InfoWindow

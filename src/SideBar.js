@@ -19,8 +19,11 @@ render() {
           )}
         </div>
         <div className='filter-wrapper'>
-          <select onChange={(event) => this.props.filterLocationType(event.target.value)}>
-            <option value='off'>off</option>
+          <select
+            onChange={(event) => this.props.filterLocationType(event.target.value)}
+            className='select'
+          >
+            <option value='filter off'>filter off</option>
             <option value='brewery'>brewery</option>
             <option value='escape room'>escape room</option>
             <option value='museum'>museum</option>

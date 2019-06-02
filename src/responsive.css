@@ -73,5 +73,6 @@
   }
   .info-window {
     width: 330px;
+    font-size: 0.9em;
   }
 }

@@ -12,7 +12,7 @@ import {debounce} from 'lodash';
 const places = [
   { id: '4b4f5c12f964a520080327e3', name: 'KIT - Kunst im Tunnel', type: 'museum', lat: 51.220050, lng: 6.767270 },
   { id: '4be413a2477d9c742184e62d', name: 'Filmmuseum ', type: 'museum', lat: 51.223810, lng: 6.771320 },
-  { id: '562a8a69498e31c0f73f3339', name: 'TeamEscape', address: 'Alexanderstraße 31, 40210 Düsseldorf',  lat: 51.220050, lng: 6.783620 },
+  { id: '562a8a69498e31c0f73f3339', name: 'TeamEscape', type: 'escape room', address: 'Alexanderstraße 31, 40210 Düsseldorf',  lat: 51.220050, lng: 6.783620 },
   { id: '4b6d5115f964a520be702ce3', name: 'Uerige', type: 'brewery', lat: 51.22509973234009, lng: 6.7723058742430755 },
   { id: '590604adf00a703cd1500e8a', name: 'Holy Craft Beer Bar', type:'brewery', lat: 51.22786801613094, lng: 6.7733523400135836 },
   { id: '58a32d1914f8f4092c99d864', name: 'Exit the Room', type: 'escape room', lat:51.216534, lng: 6.780973 },
@@ -117,7 +117,7 @@ class App extends Component {
     filterLocationType = (option) => {
       let filterdLocations
 
-      if (option !== 'off') {
+      if (option !== 'filter off') {
 
         const match = new RegExp(escapeRegExp(option), 'i')
         filterdLocations = places.filter( (place) => match.test(place.type))
