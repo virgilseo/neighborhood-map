@@ -5,13 +5,26 @@
   font-family: 'Merienda', cursive;
 }
 
+/* Header */
+
+.header-container {
+  width: 100%;
+  height: 10vh;
+}
+
+.title {
+  color: #26a659;
+  text-shadow: 2px 2px 2px #0d0d0d;
+  margin-left: 20px;
+  font-size: 1.6em;
+}
+
 /* Map */
 
 .map-container {
   position: fixed;
   width: calc(100% - 25%);
-  height: 90vh;
-  margin-top: 5vh;
+  height: 80vh;
 }
 
 img {
@@ -23,7 +36,7 @@ img {
 
 .side-container {
   width:30%;
-  height:100vh;
+  height:80vh;
   color: #f2f2f2;
   display: flex;
   flex-flow: column;
@@ -70,10 +83,6 @@ img {
   outline: none;
 }
 
-.list-view-title {
-  color: #26a659;
-  text-shadow: 2px 2px 2px #0d0d0d;
-}
 
 /* Info Window */
 

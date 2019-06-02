@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import './responsive.css';
+import Header from './Header'
 import MapContainer from './Map';
 import SideBar from './SideBar';
 import escapeRegExp from 'escape-string-regexp';
@@ -134,6 +135,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Header />
         <SideBar
           places={this.state.places}
           filterLocations={this.filterLocations}
