@@ -117,7 +117,7 @@ class App extends Component {
     filterLocationType = (option) => {
       let filterdLocations
 
-      if (option !== 'filter off') {
+      if (option !== 'off') {
 
         const match = new RegExp(escapeRegExp(option), 'i')
         filterdLocations = places.filter( (place) => match.test(place.type))

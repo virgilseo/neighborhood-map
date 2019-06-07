@@ -11,7 +11,7 @@ export class MapContainer extends Component {
       <div className='map-container'>
         <Map
           google={this.props.google}
-          zoom={14}
+          zoom={13}
           initialCenter={{ lat: 51.22172, lng: 6.77616 }}
         >
           {this.props.places.map((place) => (

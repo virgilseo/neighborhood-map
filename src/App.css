@@ -95,10 +95,13 @@ img {
   margin-bottom: 10px;
   border-bottom: 1px solid #26a659;
   padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .select {
-  width: 60%;
+  width: 65%;
   font-size: 0.9em;
   height: 28px;
   border-top-left-radius: 4px;
@@ -106,6 +109,7 @@ img {
   outline: none;
   font-family: 'Merienda', cursive;
   text-align: center;
+  margin-right: 10%;
 }
 
 .select:hover {
@@ -113,6 +117,12 @@ img {
 }
 .select:focus {
   box-shadow: 0px 0px 15px 1px #26a659;
+}
+
+.filter-text {
+  background-color: #26a659;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /* Info Window */
