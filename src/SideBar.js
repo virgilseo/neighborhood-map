@@ -32,6 +32,7 @@ render() {
           </select>
         </div>
         <div className='list-view' id='locations-list'>
+          <i className='material-icons icon-title'>place</i>
           <ol className='location-grid' aria-labelledby="locations-list">
           {this.props.places.map((place) => (
             <li
@@ -43,7 +44,8 @@ render() {
               role='button'
               name={place.name}
             >
-              <p>{place.name}</p>
+              <i className='material-icons'>place</i>
+              <span className='list-name'>{place.name}</span>
             </li>
           ))}
           </ol>

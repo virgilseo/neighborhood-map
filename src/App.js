@@ -21,7 +21,7 @@ const places = [
   { id: '4b3be8f6f964a520207e25e3', name: 'Takumi', type: 'restaurant', lat: 51.22342887840904, lng: 6.788530773884483 },
   { id: '4c0cf5bf2466a5938fc87621', name: 'Casita Mexicana', type: 'restaurant', lat: 51.210704143755486, lng: 6.774504906838067 },
   { id: '53fd985a498ed8daa0b774c9', name: 'Bob & Mary', type: 'restaurant', lat: 51.2149445291977, lng: 6.756618179610777 },
-  { id: '4b5ed93ef964a520d79a29e3', name: 'Brauerei Schumacher Stammhaus', type: 'brewery', lat: 51.221498311147, lng: 6.785565174084197 },
+  { id: '4b5ed93ef964a520d79a29e3', name: 'Schumacher Stammhaus', type: 'brewery', lat: 51.221498311147, lng: 6.785565174084197 },
   { id: '4b6d861ff964a5202d7a2ce3', name: 'Brauhaus Joh. Albrecht', type: 'brewery', lat: 51.24036708537516, lng: 6.751411578633284 },
   { id: '4bdc1b9f63c5c9b6ec6a2a68', name: 'Museum Kunstpalast', type: 'museum', lat: 51.23492906744998, lng: 6.773236574142464 },
   { id: '4b6e9e41f964a5202ac42ce3', name: 'K21 Ständehaus', type: 'museum', lat: 51.21664355455374, lng: 6.773998887902013 }

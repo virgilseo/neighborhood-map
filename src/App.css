@@ -50,8 +50,14 @@ img {
 .location-grid {
   list-style-type: none;
   text-align: left;
-  line-height: 0.8em;
+  line-height: 1.8em;
   padding-left: 0;
+  overflow: auto;
+  max-height: 79%;
+  width: 90%;
+  background-color: white;
+  color: #2C5364;
+  border-radius: 6px;
 }
 
 .search-input-wrapper {
@@ -77,17 +83,31 @@ img {
 
 .list-item {
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #2C5364;
 }
 
 .list-item:hover {
-  color: #26a659;
+  color: white;
+  background-color: #26a659;
   cursor: pointer;
 }
 
 .list-item:focus {
-  color: #26a659;
+  color: white;
+  background-color: #26a659;
   cursor: pointer;
   outline: none;
+}
+
+.list-name {
+  margin-left: 10px;
+}
+
+.icon-title {
+  font-size: 2.4em;
+  cursor: default;
 }
 
 .filter-wrapper {
@@ -194,4 +214,23 @@ img {
   color: #26a659;
   font-size: 1.2em;
   font-weight: 300;
+}
+
+/* Custom ScrollBar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2C5364;
+  border-radius: 6px;
 }
