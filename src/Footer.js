@@ -7,7 +7,7 @@ class Footer extends Component {
     return (
       <div className='footer-container'>
        <footer>
-        <p className='footer-text'>© 2019 ChiScript</p>
+        <span className='footer-text'>© 2019 ChiScript</span>
        </footer>
       </div>
     )
