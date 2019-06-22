@@ -14,11 +14,23 @@
   align-items: center;
 }
 
+ .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
 .title {
   color: #26a659;
   text-shadow: 2px 2px 2px #0d0d0d;
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 1.6em;
+}
+
+.menu-icon {
+  color: #26a659;
+  margin-left: 10px;
+  font-size: 1.8em;
 }
 
 /* Map */
