@@ -5,7 +5,7 @@ class SideBar extends Component {
 render() {
 
     return(
-      <div className='side-container'>
+      <div className='side-container-clossed'>
         <div className="search-input-wrapper">
           <input
             type="search"
