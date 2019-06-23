@@ -1,23 +1,30 @@
 
 @media only screen and (min-width: 601px) {
-  .list-view-title {
-    font-size: 1.1em;
-  }
   .list-item {
     font-size: 0.9em;
   }
   .input {
     font-size: 0.9em;
-    height: 24px;
+    height: 32px;
   }
-  .map-container {
-    width: calc(100% - 35%);
+  .map-container-half {
+    width: calc(100% - 39%);
+  }
+  .side-container-open {
+    width: 38%;
   }
   .api-text {
     font-size: 0.8em;
   }
   .info-window {
     width: 250px;
+    font-size: 1.1em;
+  }
+  .footer-text {
+    font-size: 0.9em
+  }
+  .title {
+    font-size: 1.8em;
   }
 }
 

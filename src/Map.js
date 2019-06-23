@@ -6,9 +6,8 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 export class MapContainer extends Component {
 
   render() {
-    console.log(this.props.hits)
     return (
-      <div className='map-container'>
+      <div className={this.props.mapWidth}>
         <Map
           google={this.props.google}
           zoom={13}

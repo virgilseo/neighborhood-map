@@ -40,7 +40,8 @@ class App extends Component {
     hits:[],
     error:'',
     isLoading: false,
-    sideBarclass: 'side-container-clossed'
+    sideBarclass: 'side-container-clossed',
+    mapWidth: 'map-container-full'
   }
 
   componentDidMount() {
@@ -137,7 +138,10 @@ class App extends Component {
 
     toggleSideBar = () => {
       let sideClass = (this.state.sideBarclass === 'side-container-clossed') ? 'side-container-open' : 'side-container-clossed'
+      let mapWidth = (this.state.mapWidth === 'map-container-full') ? 'map-container-half' : 'map-container-full'
+
       this.setState({sideBarclass: sideClass})
+      this.setState({mapWidth: mapWidth})
     }
 
   render() {
@@ -166,6 +170,7 @@ class App extends Component {
           hits={this.state.hits}
           error={this.state.error}
           isLoading={this.state.isLoading}
+          mapWidth={this.state.mapWidth}
         />
         <Footer />
       </div>

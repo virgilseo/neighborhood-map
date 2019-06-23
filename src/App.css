@@ -35,7 +35,14 @@
 
 /* Map */
 
-.map-container {
+.map-container-full {
+  position: fixed;
+  width: calc(100% - 10%);
+  height: 80vh;
+  margin-right: 5%;
+}
+
+.map-container-half {
   position: fixed;
   width: calc(100% - 10%);
   height: 80vh;
