@@ -39,7 +39,8 @@ class App extends Component {
     query:'',
     hits:[],
     error:'',
-    isLoading: false
+    isLoading: false,
+    sideBarclass: 'side-container-clossed'
   }
 
   componentDidMount() {
@@ -132,17 +133,27 @@ class App extends Component {
 
     }
 
+    //Toggle Sidebar when the users clicks the menu icons
+
+    toggleSideBar = () => {
+      let sideClass = (this.state.sideBarclass === 'side-container-clossed') ? 'side-container-open' : 'side-container-clossed'
+      this.setState({sideBarclass: sideClass})
+    }
+
   render() {
 
     return (
       <div className="App">
-        <Header />
+        <Header
+         toggleSideBar={this.toggleSideBar}
+        />
         <SideBar
           places={this.state.places}
           filterLocations={this.filterLocations}
           listItemClick={this.listItemClick}
           hits={this.state.hits}
           filterLocationType={this.filterLocationType}
+          sideBarclass={this.state.sideBarclass}
         />
         <MapContainer
           google={this.props.google}

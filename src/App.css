@@ -60,7 +60,7 @@ img {
   color: #f2f2f2;
   display: flex;
   flex-flow: column;
-
+  transition: 0.4s;
 }
 
 .location-grid {
@@ -74,10 +74,14 @@ img {
   color: #2C5364;
   border-radius: 6px;
   max-height: 74%;
+  margin-left: 5%;
 }
 
 .search-input-wrapper {
   border-bottom: 1px solid grey;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   padding-bottom: 20px;
 }
 .input {
@@ -88,7 +92,6 @@ img {
   font-family: 'Merienda', cursive;
   outline: none;
   height: 30px;
-  margin-left: 5%;
 }
 
 .input:hover {
@@ -126,6 +129,7 @@ img {
 .icon-title {
   font-size: 2.4em;
   cursor: default;
+  margin-left: 5%;
 }
 
 .filter-wrapper {
@@ -157,7 +161,6 @@ img {
 
 .list-view {
   height: 75%;
-  margin-left: 5%;
   width: 100%;
 }
 
