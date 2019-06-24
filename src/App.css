@@ -28,18 +28,23 @@
 }
 
 .menu-icon {
-  color: #26a659;
+  color: white;
   margin-left: 10px;
   font-size: 2em;
+  background-color: #26a659;
+  padding: 2px;
+  border-radius: 50%;
 }
-
+.menu-icon:hover {
+  cursor: pointer;
+}
 /* Map */
 
 .map-container-full {
   position: fixed;
-  width: calc(100% - 10%);
+  width: calc(100% - 2%);
   height: 80vh;
-  margin-right: 5%;
+  margin-right: 1%;
 }
 
 .map-container-half {
@@ -58,7 +63,7 @@ img {
 
 .side-container-clossed {
   visibility: hidden;
-  width:5%;
+  width:1%;
   height:80vh;
 }
 .side-container-open{
@@ -67,7 +72,6 @@ img {
   color: #f2f2f2;
   display: flex;
   flex-flow: column;
-  transition: 0.4s;
 }
 
 .location-grid {
@@ -137,6 +141,7 @@ img {
   font-size: 2.4em;
   cursor: default;
   margin-left: 5%;
+  margin-top: 15px;
 }
 
 .filter-wrapper {

@@ -26,33 +26,37 @@
   .title {
     font-size: 1.8em;
   }
+  .location-title {
+    font-size: 1.4em;
+  }
 }
 
 
 @media only screen and (min-width: 1200px) {
-  .list-view-title {
-    font-size: 1.5em;
+  .title {
+    font-size: 1.9em;
+  }
+  .menu-icon {
+    font-size: 1.8em;
   }
   .list-item {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   .input {
     width: 90%;
-    font-size: 0.9em;
-    height: 34px;
+    height: 36px;
   }
-  .side-container {
-    width:20%;
+  .map-container-half {
+    width: calc(100% - 24%);
   }
-
-  .map-container {
-    width: calc(100% - 22.5%);
+  .side-container-open {
+    width: 23%;
   }
   .api-text {
     font-size: 0.9em;
   }
   .info-window {
-    width: 330px;
-    font-size: 0.9em;
+    width: 300px;
+    font-size: 1em;
   }
 }
