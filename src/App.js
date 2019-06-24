@@ -88,7 +88,6 @@ class App extends Component {
       this.setState({places: filterdLocations})
     } else {
       this.setState({places: places})
-      this.setState({showingInfoWindow: false})
     }
   },700)
 
@@ -129,7 +128,6 @@ class App extends Component {
 
       } else {
         this.setState({places: places})
-        this.setState({showingInfoWindow: false})
       }
 
     }
@@ -142,6 +140,12 @@ class App extends Component {
 
       this.setState({sideBarclass: sideClass})
       this.setState({mapWidth: mapWidth})
+    }
+
+    //Hide info window
+
+    hideInfoWindow = () => {
+      this.setState({showingInfoWindow:false})
     }
 
   render() {
@@ -171,6 +175,7 @@ class App extends Component {
           error={this.state.error}
           isLoading={this.state.isLoading}
           mapWidth={this.state.mapWidth}
+          hideInfoWindow={this.hideInfoWindow}
         />
         <Footer />
       </div>
