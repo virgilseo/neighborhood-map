@@ -49,11 +49,13 @@ export class MapContainer extends Component {
                       <p>{Object.values(this.props.hits.contact.formattedPhone || '')}</p>
                     )}
                     {this.props.hits.hours && (
-                        <p>{Object.values(this.props.hits.hours.status)}</p>
+                      <p>{Object.values(this.props.hits.hours.status)}</p>
                     )}
-                    <a href={this.props.hits.url} target="_blank" rel="noopener noreferrer">Visit website</a>
+                    {this.props.hits.url && (
+                      <a href={this.props.hits.url} target="_blank" rel="noopener noreferrer">Visit website</a>
+                    )}
                     <hr className='infowindow-line'></hr>
-                    <p className='api-text'>The information for the locations is fetched from <a href="https://foursquare.com/" target="_blank" rel="noopener noreferrer">Foursquare</a></p>
+                    <p className='api-text'>Location info provided by <a href="https://foursquare.com/" target="_blank" rel="noopener noreferrer">Foursquare</a></p>
                   </div>
                 )}
                 {this.props.error === 'error' && this.props.isLoading === false && (

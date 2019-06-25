@@ -29,6 +29,10 @@
   .location-title {
     font-size: 1.4em;
   }
+  .icon-title {
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+  }
 }
 
 
@@ -38,6 +42,7 @@
   }
   .menu-icon {
     font-size: 1.8em;
+    margin-left: 15px;
   }
   .list-item {
     font-size: 1em;
