@@ -11,7 +11,7 @@ class Header extends Component {
            onClick={() => {this.props.toggleSideBar()}}
            className='material-icons menu-icon'
            role='button'
-           name='Toggle sidebar' >menu</i>
+           name='Toggle sidebar' >{this.props.menuIcon}</i>
           <h1 className='title'>Düsseldorf Places</h1>
         </header>
       </div>
