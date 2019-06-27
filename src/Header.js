@@ -9,8 +9,10 @@ class Header extends Component {
         <header className='header'>
           <i
            onClick={() => {this.props.toggleSideBar()}}
+           onKeyPress={(event) => {if (event.key === 'Enter') this.props.toggleSideBar()}}
            className='material-icons menu-icon'
            role='button'
+           tabIndex='0'
            name='Toggle sidebar' >{this.props.menuIcon}</i>
           <h1 className='title'>Düsseldorf Places</h1>
         </header>

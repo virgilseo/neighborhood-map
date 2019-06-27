@@ -18,6 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: default;
  }
 
 .title {
@@ -35,9 +36,13 @@
   padding: 2px;
   border-radius: 50%;
 }
+
 .menu-icon:hover {
-  cursor: pointer;
+  color: #26a659;
+  background-color: white;
+  transition: 0.3s;
 }
+
 /* Map */
 
 .map-container-full {
