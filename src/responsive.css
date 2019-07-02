@@ -1,4 +1,10 @@
 
+@media only screen and (max-width: 361px) {
+  .info-window {
+    font-size: 0.8em;
+  }
+}
+
 @media only screen and (min-width: 601px) {
   .list-item {
     font-size: 0.9em;
