@@ -46,17 +46,16 @@
 /* Map */
 
 .map-container-full {
-  position: fixed;
-  width: calc(100% - 2%);
+  position: relative;
+  width: 98vw;
   height: 80vh;
-  margin-right: 1%;
+  margin-left: 1%;
 }
 
 .map-container-half {
-  position: fixed;
-  width: calc(100% - 10%);
+  position: absolute;
+  width: 100%;
   height: 80vh;
-  margin-right: 5%;
 }
 
 img {
@@ -67,9 +66,7 @@ img {
 /* SideBar */
 
 .side-container-clossed {
-  visibility: hidden;
-  width:1%;
-  height:80vh;
+  display: none;
 }
 .side-container-open{
   width:90%;

@@ -14,7 +14,7 @@
     height: 32px;
   }
   .map-container-half {
-    width: calc(100% - 39%);
+    width: 61vw;
   }
   .side-container-open {
     width: 38%;
@@ -58,7 +58,7 @@
     height: 36px;
   }
   .map-container-half {
-    width: calc(100% - 24%);
+    width: 76vw;
   }
   .side-container-open {
     width: 23%;
