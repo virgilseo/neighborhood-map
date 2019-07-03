@@ -149,6 +149,7 @@ class App extends Component {
 
     hideInfoWindow = () => {
       this.setState({showingInfoWindow:false})
+      this.setState({activeMarker: null})
     }
 
   render() {
