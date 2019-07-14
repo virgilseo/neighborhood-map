@@ -28,7 +28,7 @@ export class MapContainer extends Component {
            ))}
              <InfoWindow
                 onClose={this.props.hideInfoWindow}
-                position={{lat: parseFloat(this.props.markerLat), lng: parseFloat(this.props.markerLng)}}
+                position={{lat: parseFloat(this.props.markerLat) + 0.006, lng: parseFloat(this.props.markerLng)}}
                 visible={this.props.showingInfoWindow}>
                 <div className='info-window'>
                 {this.props.isLoading === true && (
