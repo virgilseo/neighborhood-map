@@ -105,7 +105,7 @@ img {
   padding: 10px 0px 10px 10px;
   font-family: 'Merienda', cursive;
   outline: none;
-  height: 30px;
+  height: 34px;
 }
 
 .input:hover {
@@ -152,18 +152,17 @@ img {
   border-bottom: 1px solid grey;
   padding-bottom: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .select {
-  width: 65%;
+  width: 40%;
   font-size: 0.9em;
-  height: 28px;
+  height: 30px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   font-family: 'Merienda', cursive;
-  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .filter-text {
@@ -173,6 +172,10 @@ img {
   margin-left: 5%;
   display: flex;
   align-items: center;
+}
+
+.filter-icon {
+  margin-left: 3px;
 }
 
 .list-view {

@@ -21,7 +21,7 @@ render() {
         <div className='filter-wrapper'>
           <div className='filter-text'>
             <span>Filter</span>
-            <i className='material-icons'>filter_list</i>
+            <i className='material-icons filter-icon'>filter_list</i>
           </div>
           <select
             onChange={(event) => this.props.filterLocationType(event.target.value)}
