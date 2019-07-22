@@ -24,7 +24,11 @@
   }
   .info-window {
     width: 250px;
-    font-size: 1.1em;
+    font-size: 1em;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .footer-text {
     font-size: 0.9em
@@ -33,7 +37,7 @@
     font-size: 1.8em;
   }
   .location-title {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
   .icon-title {
     margin-top: 7.5px;
@@ -67,7 +71,6 @@
     font-size: 0.9em;
   }
   .info-window {
-    width: 300px;
-    font-size: 1em;
+    font-size: 0.9em;
   }
 }
