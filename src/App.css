@@ -31,10 +31,11 @@
 .menu-icon {
   color: white;
   margin-left: 10px;
-  font-size: 2em;
+  font-size: 1.6em;
   background-color: #26a659;
-  padding: 2px;
+  padding: 3px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .menu-icon:hover {
@@ -167,11 +168,12 @@ img {
 
 .filter-text {
   background-color: #26a659;
-  padding: 10px;
+  padding: 6px;
   border-radius: 10px;
   margin-left: 5%;
   display: flex;
   align-items: center;
+  font-size: 0.9em;
 }
 
 .filter-icon {
