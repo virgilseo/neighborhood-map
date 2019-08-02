@@ -20,7 +20,6 @@ export class MapContainer extends Component {
               key={place.id}
               name={place.name}
               address={place.address}
-              animation={this.props.activeMarker ? (place.name === this.props.activeMarker.name ? this.props.google.maps.Animation.BOUNCE :'0') : '0'}
               currentMarker={place}
               id={place.id}
               title={`${place.name} - ${place.type}`}
@@ -28,7 +27,7 @@ export class MapContainer extends Component {
            ))}
              <InfoWindow
                 onClose={this.props.hideInfoWindow}
-                position={{lat: parseFloat(this.props.markerLat) + 0.006, lng: parseFloat(this.props.markerLng)}}
+                position={{lat: this.props.markerLat, lng: this.props.markerLng}}
                 visible={this.props.showingInfoWindow}>
                 <div className='info-window'>
                 {this.props.isLoading === true && (

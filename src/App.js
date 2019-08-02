@@ -53,13 +53,12 @@ class App extends Component {
   //Handle marker click and set visibility for the info window
   //Fetch information for a specific location from third party api and suply it to the user
 
-  onMarkerClick = (props, marker, e) => {
+  onMarkerClick = (marker, currentMarker, e) => {
     this.setState({
-      activeMarker: marker,
       showingInfoWindow: true,
-      markerLat: marker.currentMarker.lat,
-      markerLng: marker.currentMarker.lng,
       isLoading: true,
+      markerLat: marker.currentMarker.lat,
+      markerLng: marker.currentMarker.lng
     })
     fetch(`https://api.foursquare.com/v2/venues/${marker.id}?&client_id=ITQ0RTP2N4E2GRW1PUVHVWHCRMBOQAXIPDQK4VMFVPTRYY23&client_secret=3APPTXCDHJG5Q0I3S0BBOTOHYRNSCOBQARRXFNWZL5E3MAKU&v=20190220`)
     .then(response => {
@@ -92,27 +91,27 @@ class App extends Component {
     }
   },700)
 
+
  //Handle click on list item Locations. Animate markers and display the appropiate info window.
  //Fetch information for a specific location from third party api and suply it to the user
-    listItemClick = (listItem, e) => {
-     this.setState({
-       activeMarker: listItem,
-       markerLat: listItem.lat,
-       markerLng: listItem.lng,
-       showingInfoWindow: true,
-       isLoading: true
-     })
-     fetch(`https://api.foursquare.com/v2/venues/${listItem.id}?&client_id=ITQ0RTP2N4E2GRW1PUVHVWHCRMBOQAXIPDQK4VMFVPTRYY23&client_secret=3APPTXCDHJG5Q0I3S0BBOTOHYRNSCOBQARRXFNWZL5E3MAKU&v=20190220`)
-     .then(response => {
-       if (response.ok) {
-         return response.json();
-       } else {
-         throw new Error('Something went wrong ...');
-       }
-      })
-       .then(data => this.setState({hits: data.response.venue, error:'', isLoading: false}))
-       .catch(error =>  this.setState({error: 'error', hits:[], isLoading: false}))
-    }
+      listItemClick = (listItem) => {
+        this.setState({
+        showingInfoWindow: true,
+        isLoading: true,
+        markerLng: listItem.lng,
+        markerLat: listItem.lat
+       })
+       fetch(`https://api.foursquare.com/v2/venues/${listItem.id}?&client_id=ITQ0RTP2N4E2GRW1PUVHVWHCRMBOQAXIPDQK4VMFVPTRYY23&client_secret=3APPTXCDHJG5Q0I3S0BBOTOHYRNSCOBQARRXFNWZL5E3MAKU&v=20190220`)
+       .then(response => {
+         if (response.ok) {
+           return response.json();
+         } else {
+           throw new Error('Something went wrong ...');
+         }
+        })
+         .then(data => this.setState({hits: data.response.venue, error:'', isLoading: false}))
+         .catch(error =>  this.setState({error: 'error', hits:[], isLoading: false}))
+      }
 
     // Filter locations based on type
 
@@ -167,6 +166,8 @@ class App extends Component {
           hits={this.state.hits}
           filterLocationType={this.filterLocationType}
           sideBarclass={this.state.sideBarclass}
+          onMarkerClick={this.onMarkerClick}
+          activeMarker={this.state.activeMarker}
         />
         <MapContainer
           google={this.props.google}
