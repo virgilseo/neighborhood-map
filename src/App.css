@@ -147,6 +147,12 @@ img {
   margin-left: 5%;
 }
 
+.icon-no-results {
+  font-size: 2.1em;
+  cursor: default;
+  margin-left: 5%;
+}
+
 .filter-wrapper {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -183,6 +189,18 @@ img {
 .list-view {
   height: 75%;
   width: 100%;
+}
+
+.no-search-container {
+  display: flex;
+  align-items: center;
+}
+.no-search-results {
+  background-color: #D11919;
+  border-radius: 8px;
+  padding: 6px;
+  font-size: 0.8em;
+  margin-left: 10px;
 }
 
 /* Info Window */

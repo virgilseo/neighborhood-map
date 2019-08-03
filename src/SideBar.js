@@ -14,9 +14,6 @@ render() {
             className='input'
             tabIndex='0'
           />
-          {this.props.places.length === 0 && (
-            <p className='no-search-results'>No search results were found</p>
-          )}
         </div>
         <div className='filter-wrapper'>
           <div className='filter-text'>
@@ -35,7 +32,14 @@ render() {
           </select>
         </div>
         <div className='list-view' id='locations-list'>
+        {this.props.places.length === 0 ? (
+          <div className='no-search-container'>
+            <i className='material-icons icon-no-results'>mood_bad</i>
+            <p className='no-search-results'>No search results were found</p>
+          </div>
+        ) : (
           <i className='material-icons icon-title'>place</i>
+        )}
           <ol className='location-grid' aria-labelledby="locations-list">
           {this.props.places.map((place) => (
             <li
