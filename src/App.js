@@ -42,7 +42,8 @@ class App extends Component {
     isLoading: false,
     sideBarclass: 'side-container-clossed',
     mapWidth: 'map-container-full',
-    menuIcon:'menu'
+    menuIcon:'menu',
+    screenWidth: window.innerWidth
   }
 
   componentDidMount() {
@@ -94,6 +95,7 @@ class App extends Component {
 
  //Handle click on list item Locations. Animate markers and display the appropiate info window.
  //Fetch information for a specific location from third party api and suply it to the user
+ //Close the sidebar after user cliks on a location only for mobile devices
       listItemClick = (listItem) => {
         this.setState({
         showingInfoWindow: true,
@@ -111,6 +113,12 @@ class App extends Component {
         })
          .then(data => this.setState({hits: data.response.venue, error:'', isLoading: false}))
          .catch(error =>  this.setState({error: 'error', hits:[], isLoading: false}))
+
+        if (this.state.screenWidth < 601) {
+          this.setState({sideBarclass: 'side-container-clossed'})
+          this.setState({menuIcon: 'menu'})
+          this.setState({mapWidth:'map-container-full'})
+        }
       }
 
     // Filter locations based on type
