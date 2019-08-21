@@ -15,6 +15,8 @@
   }
   .map-container-half {
     width: 61vw;
+    display: block;
+    right: 1%;
   }
   .side-container-open {
     width: 38%;
